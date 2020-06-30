@@ -13,6 +13,12 @@ app.get('/status', (req, res) => {
 	res.send({ message: 'hello world' });
 });
 
+app.post('/register', (req, res) => {
+	res.send({
+		message: `You email ${req.body.email} is registered! Have fun!`,
+	});
+});
+
 app.listen(process.env.PORT || 8081, () => {
 	console.log(`Server started on port`);
 });
